@@ -1,0 +1,29 @@
+# FedoraBreeze for Ghostty
+# Adapted from Fedora Brand Guides
+
+background = #232627
+foreground = #fcfcfc
+
+cursor-color = #51a2da
+cursor-text = #ffd117
+
+selection-background = #3c6eb4
+selection-foreground = #fefefe
+
+palette = 0=#232627
+palette = 1=#ee0000
+palette = 2=#38bc3b
+palette = 3=#e59728
+palette = 4=#294172
+palette = 5=#603e79
+palette = 6=#51a2da
+palette = 7=#a1a9b1
+
+palette = 8=#31363b
+palette = 9=#db3279
+palette = 10=#79db32
+palette = 11=#ffd117
+palette = 12=#3c6eb4
+palette = 13=#a07cbc
+palette = 14=#60a5fa
+palette = 15=#ffffff

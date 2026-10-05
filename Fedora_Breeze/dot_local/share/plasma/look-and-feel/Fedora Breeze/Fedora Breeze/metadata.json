@@ -1,0 +1,19 @@
+{
+    "KPackageStructure": "Plasma/LookAndFeel",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "",
+                "Name": "Erick McGhee"
+            }
+        ],
+        "Description": "Uses Fedora official colors",
+        "Id": "Fedora Breeze",
+        "License": "MIT",
+        "Name": "Fedora Breeze",
+        "Website": "https://github.com/mcgheee"
+    },
+    "Keywords": "Desktop;Workspace;Appearance;Look and Feel;",
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-MainScript": "default"
+}

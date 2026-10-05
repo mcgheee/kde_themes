@@ -1,0 +1,400 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# A continuation prompt that displays two filled-in arrows
+continuation_prompt = '▶▶ '
+
+command_timeout = 1000
+
+scan_timeout = 100
+
+# Disable the blank line at the start of the prompt
+#add_newline = false
+
+# Set color palette
+palette = 'fedorabreeze'
+
+format = """
+[╭╴](fg:arrow)\
+[](bar1)\
+$os\
+[](fg:bar1 bg:bar2)\
+$username\
+[@](fg:asym bg:bar2)\
+$hostname\
+[](fg:bar2 bg:bar3)\
+$directory\
+[](fg:bar3 bg:bar4)\
+$git_branch\
+$git_status\
+[](fg:bar4 bg:bar5)\
+$golang\
+$nodejs\
+$python\
+$rust\
+[](fg:bar5)\
+$line_break\
+[│](fg:arrow)\
+$line_break\
+[╰─](fg:arrow)\
+[](fg:bar6)\
+$shell\
+[](fg:bar6)\
+$character\
+"""
+
+#$line_break\
+#[](fg:color5 bg:color6)\
+#$character
+#[character]
+#success_symbol = "[ 󰍟]"
+#error_symbol = "[ 󰍟]"
+#success_symbol = "[❯]"
+#error_symbol = "[✗]"
+#vimcmd_symbol = "[V]"
+#success_symbol = '[➜](bold color2) '
+#[](fg:color6)\
+#[](color6)\
+#[░▒▓](color1)\
+#error_symbol = '[✗](bold color1) '
+
+[shell]
+disabled = false
+bash_indicator = '$ '
+fish_indicator = '󰈺 '
+zsh_indicator = '% '
+powershell_indicator = ' '
+style = "bg:bar6"
+format = '[ $indicator]($style)'
+
+[character]
+success_symbol = "[❯](bold fgpos)"
+error_symbol = "[✘](bold fgneg)"
+
+[os]
+#format = "[$symbol $name $type]($style)"
+format = "[$symbol]($style)"
+style = "bg:bar1 fg:lbl1"
+disabled = false
+
+[username]
+show_always = true
+style_user = "bg:bar2 fg:lbl2"
+style_root = "bg:bar2 fg:asym"
+format = '[ $user]($style)'
+disabled = false
+
+[hostname]
+ssh_symbol = " "
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[$hostname]($style)'
+trim_at = '.'
+disabled = false
+style = "bg:bar2 fg:lbl1"
+
+[directory]
+style = "bg:bar3"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+
+# Here is how you can shorten some long paths by text replacement
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = " "
+style = "bg:bar4 fg:lbl3"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:bar4 fg:lbl3"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:bar5 fg:lbl1"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:bar5 fg:lbl1"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:bar5 fg:lbl1"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = "󱘗 "
+style = "bg:bar5 fg:lbl1"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:bar5 fg:lbl4"
+format = '[ $symbol $context ]($style)'
+
+
+### Default Nerdfont Symbols
+
+[aws]
+symbol = " "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
+
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fortran]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[gcloud]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[gradle]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+#EndeavourOS = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[status]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[xmake]
+symbol = " "
+
+[zig]
+symbol = " "
+
+
+### Color Palettes
+
+[palettes.template]
+# Special
+colorbg = '#000000'
+colorfg = '#FFFFFF'
+# Black
+color0 = '#000000'
+color8 = '#545054'
+# Red
+color1 = '#A80000'
+color9 = '#F85450'
+# Green
+color2 = '#00A800'
+color10 = '#50FC50'
+# Yellow
+color3 = '#A85400'
+color11 = '#F8FC50'
+# Blue
+color4 = '#0000A8'
+color12 = '#5054F8'
+# Magenta
+color5 = '#A800A8'
+color13 = '#F854F8'
+# Cyan
+color6 = '#00A8A8'
+color14 = '#50FCF8'
+# White
+color7 = '#A8A8A8'
+color15 = '#F8FCF8'
+
+[palettes.fedora]
+color0  = "#000000"
+color1  = "#EE0000"
+color2  = "#38bc3b"
+color3  = "#e59728"
+color4  = "#294172"
+color5  = "#603e79"
+color6  = "#51A2DA"
+color7  = "#dedede"
+color8  = "#4c4c4c"
+color9  = "#db3279"
+color10 = "#79db32"
+color11 = "#Ffd117"
+color12 = "#3c6eb4"
+color13 = "#a07cbc"
+color14 = "#60a5fa"
+color15 = "#FFFFFF"
+background     = "#080d15"
+foreground     = "#dedede"
+cursor-color = "#3c6eb4"
+cursor-text  = "#4c4c4c"
+
+[palettes.fedorabreeze]
+arrow =  "#4c4c4c"
+asym  =  "#db3279"
+fgpos =  "#79db32"
+fgneg =  "#ee0000"
+bar6  =  "#51a2da"
+bar5  =  "#4788c7"
+bar4  =  "#3c6eb4"
+bar3  =  "#335894"
+bar2  =  "#294172"
+bar1  =  "#3c6eb4"
+lbl1  =  "#ffffff"
+lbl2  =  "#ffd117"
+lbl3  =  "#e59728"
+lbl4  =  "#a07cbc"
