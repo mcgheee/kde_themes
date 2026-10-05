@@ -1,0 +1,31 @@
+# Stellar Bloom
+# Ghostty theme derived from the supplied nebula image.
+
+background = #030B0F
+foreground = #C7E0F0
+
+cursor-color = #69E6F7
+cursor-text = #030B0F
+
+selection-background = #1D4D7E
+selection-foreground = #D9EEF8
+
+# Normal ANSI colors
+palette = 0=#07141C
+palette = 1=#C95D86
+palette = 2=#4EB7A5
+palette = 3=#C9AD72
+palette = 4=#347FC4
+palette = 5=#9A6AB5
+palette = 6=#36AFCB
+palette = 7=#AFC7D8
+
+# Bright ANSI colors
+palette = 8=#1A354A
+palette = 9=#F07AA3
+palette = 10=#72D8C4
+palette = 11=#F0D58B
+palette = 12=#56BCE8
+palette = 13=#D0A1D7
+palette = 14=#69E6F7
+palette = 15=#D9EEF8
